@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types Of Inputs</title>
+</head>
+
+<body bgcolor="#f5f5f5">
+    <h1 align="center">Job Application Portal</h1>
+    <hr size="2" color="black" width="50%">
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend><b>Personal Information</b></legend>
+
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" size="40" placeholder="Enter your name" required>
+            </p>
+
+            <p>
+                <label for="address">Address:</label><br>
+                <textarea id="address" name="address" rows="3" cols="40" placeholder="Enter your address"></textarea>
+            </p>
+
+            <p>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </p>
+
+            <p>
+                <label>Gender:</label><br>
+                <input type="radio" name="gender" value="male" id="ma">
+                <label for="ma">Male</label>
+                <input type="radio" name="gender" value="female" id="fe">
+                <label for="fe">Female</label>
+                <input type="radio" name="gender" value="other" id="ot">
+                <label for="ot">Other</label>
+            </p>
+
+            <p>
+                <label for="degree">Which Degree:</label>
+                <select id="degree" name="degree" required>
+                    <option value="">-- Select Degree --</option>
+                    <option value="BTech">B.Tech</option>
+                    <option value="MTech">M.Tech</option>
+                    <option value="BSc">B.Sc</option>
+                    <option value="MSc">M.Sc</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="sky123@mail.com" size="40">
+            </p>
+
+            <p>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="+91 - 96315 XXXXX" size="40">
+            </p>
+
+            <p>
+                <label for="password">Create Password:</label><br>
+                <input type="password" id="password" name="password" size="40">
+            </p>
+
+            <p>
+                <label for="portfolio">Portfolio URL:</label><br>
+                <input type="url" id="portfolio" name="portfolio" placeholder="www.portfolio.com" size="40">
+            </p>
+
+            <p>
+                <label for="color">Favorite Color:</label><br>
+                <input type="color" id="color" name="color">
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><b>Job Preferences</b></legend>
+
+            <p>
+                <label for="position">Position Applying For:</label><br>
+                <input type="text" id="position" name="position" placeholder="Job title" size="40">
+            </p>
+
+            <p>
+                <label>Preferred Work Mode:</label><br>
+                <input type="checkbox" name="workmode" value="Remote"> Remote
+                <input type="checkbox" name="workmode" value="Onsite"> Onsite
+                <input type="checkbox" name="workmode" value="Hybrid"> Hybrid
+            </p>
+
+            <p>
+                <label for="experience">Years of Experience:</label><br>
+                <input type="number" id="experience" name="experience" min="0" max="50">
+            </p>
+
+            <p>
+                <label for="interview">Preferred Interview Date & Time:</label><br>
+                <input type="datetime-local" id="interview" name="interview">
+            </p>
+
+            <p>
+                <label for="resume">Upload Resume:</label><br>
+                <input type="file" id="resume" name="resume">
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><b>Additional Information</b></legend>
+
+            <p>
+                <label for="search">Search Skills:</label><br>
+                <input type="search" id="search" name="search" placeholder="Search...">
+            </p>
+
+            <p>
+                <label for="range">Expected Salary Range:</label><br>
+                <input type="range" id="range" name="salary" min="20000" max="100000" step="1000">
+            </p>
+
+            <p>
+                <label for="month">Available From (Month):</label><br>
+                <input type="month" id="month" name="available_month">
+            </p>
+
+            <p>
+                <label for="week">Preferred Week for Joining:</label><br>
+                <input type="week" id="week" name="joining_week">
+            </p>
+
+            <p>
+                <label for="time">Preferred Interview Time:</label><br>
+                <input type="time" id="time" name="interview_time">
+            </p>
+
+            <p>
+                <label for="profilepic">Upload Profile Picture:</label><br>
+                <input type="file" id="profilepic" name="profilepic" accept="image/*">
+            </p>
+
+
+
+        </fieldset>
+
+        <input type="hidden" name="formtype" value="job_application">
+
+        <br>
+        <div align="center">
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Clear Form">
+        </div>
+    </form>
+</body>
+
+</html>
