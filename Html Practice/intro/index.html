@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Notes</title>
+</head>
+
+<body bgcolor="lightgreen">
+    <div align="center">
+        <h1><u>Web Dev Notes: VS Code &amp; HTML Basics</u></h1>
+        <p>A simple, HTML-only page you can open directly in any browser.</p>
+    </div>
+
+
+
+<!-- VS STUDIO INSTALL AND SETUP -->
+
+    <h2 id="vscode" ">1) VS Code: Install &amp; Setup</h2>
+    <p>Visual Studio Code (VS Code) is a code editor for writing <strong>HTML</strong>, <strong>CSS</strong>, and
+        <strong>JavaScript</strong>. It has many extensions and a large community.</p>
+    <p><strong>Install steps:</strong></p>
+    <ol>
+        <li>Go to <a href=" https://code.visualstudio.com/" target="_blank">code.visualstudio.com/download</a>
+        and download the installer for your operating system.</li>
+        <li>Open the downloaded file, accept the terms, then click <em>Next</em> until installation completes.</li>
+        <li>Open VS Code → <em>File</em> → <em>Open Folder…</em> and choose your project folder.</li>
+        </ol>
+
+<hr color="black" >
+<!-- Basic Settings in VS Code -->
+        
+        <h2 id="settings">2) Basic Settings in VS Code</h2>
+        <ul>
+            <li><strong>Auto Save:</strong> <em>File</em> → <em>Auto Save</em> (enable).</li>
+            <li><strong>Compact Folders:</strong> <em>Settings</em> → search “Compact Folders” → uncheck.</li>
+        </ul>
+
+<hr color="black" >
+
+<!-- Extensions to Install -->
+
+        <h2 id="extensions">3) Extensions to Install</h2>
+        <ul>
+            <li><strong>Live Server</strong> (by Ritwick Dey) — start a local server and auto-refresh your page.</li>
+            <li><strong>Prettier</strong> (by Prettier.io) — auto-format your code for a consistent style.</li>
+            <li><strong>Material Theme Icons</strong> — nicer file and folder icons in Explorer.</li>
+        </ul>
+<hr color="black" >
+
+<!-- Web Technologies Overview -->
+
+        <h2 id="webtech">4) Web Technologies Overview</h2>
+        <p>Web technologies power web pages and websites. The modern web began with the <strong>World Wide Web
+                (WWW)</strong> at CERN by <strong>Tim Berners-Lee</strong>. Early markup experiments led to <strong>HTML
+                (HyperText Markup Language)</strong>, which runs in all browsers. The current version in common use is
+            <strong>HTML5</strong>.
+        </p>
+
+<hr color="black" >
+<!-- HTML Basics -->
+        <!-- Comments -->
+
+        <h2 id="html-basics">5) HTML Basics</h2>
+        <h3>Comments</h3>
+        <p>Use comments to explain your code. Browsers ignore them.</p>
+        <pre><code>&lt;!-- This is a comment --&gt; &lt;!-- Comments start with "&lt;!-- and end with --&gt;" --&gt;
+</code></pre>
+
+<!-- Tags & Elements -->
+        <h3>Tags &amp; Elements</h3>
+        <p>HTML uses <em>tags</em> to wrap content. Most tags have an opening and a closing form.</p>
+        <pre><code>&lt;tagname&gt; ... content ... &lt;/tagname&gt;
+</code></pre>
+
+        <h3>Attributes</h3>
+        <p>Tags can include <em>attributes</em> to provide extra information.</p>
+        <pre><code>&lt;h1 title="heading"&gt;Some text&lt;/h1&gt;
+</code></pre>
+
+        <h3>Document Structure</h3>
+        <p>A basic HTML page has two children inside <code>&lt;html&gt;</code>: <code>&lt;head&gt;</code> (metadata like
+            title) and <code>&lt;body&gt;</code> (the visible content).</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<hr color="black" >
+
+<!-- Handy Shortcuts (Emmet) -->
+        <h2 id="shortcuts">6) Handy Shortcuts (Emmet)</h2>
+        <p>In VS Code, type <code>!</code> and press Enter to insert an HTML5 template. You can also use
+            <code>html:5</code>
+            and press Enter.
+        </p>
+        <pre><code>!      → expands to an HTML5 boilerplate in VS Code
+html:5 → same as above
+</code></pre>
+
+        <h2>Indentation</h2>
+        <p>Left-side spacing is called <em>indentation</em>. Good code uses consistent indentation and comments for
+            readability.</p>
+<hr color="black" >
+
+</html>

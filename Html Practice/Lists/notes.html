@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Lists and Block vs Inline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    legend {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+      overflow-x: auto;
+    }
+    .block-example {
+      background-color: lightblue;
+      margin: 5px 0;
+      padding: 5px;
+    }
+    .inline-example {
+      background-color: lightgreen;
+      padding: 2px 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lists in HTML</h1>
+  <p>Lists in HTML are used to list out certain items. Lists are basically three types:</p>
+  <ol>
+    <li>Ordered Lists</li>
+    <li>Unordered Lists</li>
+    <li>Definition Lists</li>
+  </ol>
+
+  <!-- Ordered List Example -->
+  <fieldset>
+    <legend>1. Ordered List</legend>
+    <p>Items are displayed in a specific order using the <code>&lt;ol&gt;</code> tag:</p>
+    <pre>
+&lt;ol&gt;
+  &lt;li&gt;Raj&lt;/li&gt;
+  &lt;li&gt;Shekhar&lt;/li&gt;
+  &lt;li&gt;John&lt;/li&gt;
+&lt;/ol&gt;
+    </pre>
+    <ol>
+      <li>Raj</li>
+      <li>Shekhar</li>
+      <li>John</li>
+    </ol>
+  </fieldset>
+
+  <!-- Unordered List Example -->
+  <fieldset>
+    <legend>2. Unordered List</legend>
+    <p>Items are displayed without order using the <code>&lt;ul&gt;</code> tag:</p>
+    <pre>
+&lt;ul&gt;
+  &lt;li&gt;Raj&lt;/li&gt;
+  &lt;li&gt;Shekhar&lt;/li&gt;
+  &lt;li&gt;John&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+    <ul>
+      <li>Raj</li>
+      <li>Shekhar</li>
+      <li>John</li>
+    </ul>
+  </fieldset>
+
+  <!-- Nested List Example -->
+  <fieldset>
+    <legend>Nested Lists</legend>
+    <p>You can place one list inside another:</p>
+    <pre>
+&lt;ul&gt;
+  &lt;li&gt;
+    Friends
+    &lt;ol&gt;
+      &lt;li&gt;Hello&lt;/li&gt;
+      &lt;li&gt;Bye&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+    <ul>
+      <li>
+        Friends
+        <ol>
+          <li>Hello</li>
+          <li>Bye</li>
+        </ol>
+      </li>
+    </ul>
+  </fieldset>
+
+  <!-- Definition List Example -->
+  <fieldset>
+    <legend>3. Definition List</legend>
+    <p>Used for terms and their definitions using <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, and <code>&lt;dd&gt;</code>:</p>
+    <pre>
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Hypertext Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+  &lt;dt&gt;JS&lt;/dt&gt;
+  &lt;dd&gt;JavaScript&lt;/dd&gt;
+&lt;/dl&gt;
+    </pre>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Hypertext Markup Language</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets</dd>
+      <dt>JS</dt>
+      <dd>JavaScript</dd>
+    </dl>
+  </fieldset>
+
+  <!-- Block vs Inline Example -->
+  <fieldset>
+    <legend>Block vs Inline Elements</legend>
+    <p><strong>Block elements</strong> always start on a new line and take up full width:</p>
+    <pre>
+&lt;div&gt;This is a DIV (block element)&lt;/div&gt;
+&lt;div&gt;This is another DIV (block element)&lt;/div&gt;
+    </pre>
+    <div class="block-example">This is a DIV (block element)</div>
+    <div class="block-example">This is another DIV (block element)</div>
+
+    <p><strong>Inline elements</strong> stay in the same line and take only as much width as needed:</p>
+    <pre>
+&lt;span&gt;This is a SPAN (inline)&lt;/span&gt;
+&lt;span&gt;This is another SPAN (inline)&lt;/span&gt;
+    </pre>
+    <span class="inline-example">This is a SPAN (inline)</span>
+    <span class="inline-example">This is another SPAN (inline)</span>
+  </fieldset>
+
+</body>
+</html>
