@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media in HTML - Notes</title>
+</head>
+<body bgcolor="lightyellow">
+    <div align="center">
+        <h1>Media in HTML</h1>
+        <p>HTML5 introduces many media elements such as <b>video</b>, <b>audio</b>, <b>iframe</b>, <b>track</b>, and <b>picture</b>. These are used to present media content inside web pages.</p>
+    </div>
+
+    <hr>
+
+    <!-- Video Section -->
+    <h2>1. Video Tag</h2>
+    <p>The <code>&lt;video&gt;</code> tag is used to embed videos on web pages.  
+       You can control playback using attributes like <b>controls</b>, <b>autoplay</b>, <b>muted</b>, and <b>loop</b>.  
+       The <code>&lt;source&gt;</code> tag provides the video file using the <b>src</b> attribute.</p>
+
+    <video height="200" width="200" controls autoplay muted loop>
+        <source src="./Are maiya yo ka dekh liyo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <pre>
+&lt;video height="200" controls autoplay muted loop&gt;
+    &lt;source src="PathName.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+    </pre>
+
+    <hr>
+
+    <!-- Audio Section -->
+    <h2>2. Audio Tag</h2>
+    <p>The <code>&lt;audio&gt;</code> tag is used to play audio files.  
+       It also uses <b>controls</b>, <b>autoplay</b>, and <b>loop</b> attributes.  
+       The <code>&lt;source&gt;</code> tag specifies the audio file.</p>
+
+    <audio controls autoplay loop>
+        <source src="./Tu_Meri_Dhadak_Hai_Rashmi-Virag_Vishal_Mishra_Javed-Mohsin.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <pre>
+&lt;audio controls autoplay loop&gt;
+    &lt;source src="AudioPath.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+    </pre>
+
+    <hr>
+
+    <!-- Iframe Section -->
+    <h2>3. Iframe Tag</h2>
+    <p>The <code>&lt;iframe&gt;</code> tag is used to display another web page inside your webpage.  
+       It can also embed PDFs, Docs, or third-party websites.  
+       You can set <b>height</b>, <b>width</b>, and <b>frameborder</b>.</p>
+
+    <iframe src="https://en.wikipedia.org/wiki/HTML5" width="400" height="200" frameborder="0"></iframe>
+
+    <pre>
+&lt;iframe src="https://www.example.com" width="400" height="200" frameborder="0"&gt;&lt;/iframe&gt;
+    </pre>
+
+    <hr>
+
+    <!-- Track Section -->
+    <h2>4. Track Tag</h2>
+    <p>The <code>&lt;track&gt;</code> tag is used inside videos to add captions or subtitles.  
+       It uses attributes like <b>src</b> (file), <b>kind</b> (subtitles/captions), and <b>srclang</b> (language).</p>
+
+    <video height="200" width="200" controls>
+        <source src="./Are maiya yo ka dekh liyo.mp4" type="video/mp4">
+        <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+    </video>
+
+    <pre>
+&lt;video height="200" controls&gt;
+    &lt;source src="sample-video.mp4" type="video/mp4"&gt;
+    &lt;track src="subtitles.vtt" kind="subtitles" srclang="en" label="English"&gt;
+&lt;/video&gt;
+    </pre>
+
+    <hr>
+
+    <!-- Picture Section -->
+    <h2>5. Picture Tag</h2>
+    <p>The <code>&lt;picture&gt;</code> tag is used to display responsive images.  
+       Different images can be loaded for different screen sizes using <b>source</b> elements.</p>
+
+    <picture>
+        <source srcset="small.jpg" media="(max-width: 600px)">
+        <source srcset="large.jpg" media="(min-width: 601px)">
+        <img src="./thumb-1920-149282.jpg" alt="Responsive Image" width="300">
+    </picture>
+
+    <pre>
+&lt;picture&gt;
+    <!-- &lt;source srcset="small.jpg" media="(max-width: 600px)"&gt;
+    &lt;source srcset="large.jpg" media="(min-width: 601px)"&gt; -->
+    &lt;img src="default.jpg" alt="Responsive Image" width="300"&gt;
+&lt;/picture&gt;
+    </pre>
+
+   
+</body>
+</html>

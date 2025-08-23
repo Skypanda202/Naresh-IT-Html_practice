@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms - Complete Notes</title>
+</head>
+
+<body>
+    <h1>HTML Forms - Complete Notes</h1>
+
+    <h2>1. Introduction to Forms</h2>
+    <p>
+        Forms are used to collect user input and send data between the client and server.
+        Common examples include login, registration, contact, feedback, address, application, and payment forms.
+    </p>
+
+    <h2>2. Form Structure</h2>
+    <p>
+        Every form is enclosed by the <code>&lt;form&gt;</code> element.
+    </p>
+    <ul>
+        <li><b>action</b> – The URL or file where the submitted data will be sent.</li>
+        <li><b>method</b> – The HTTP method used to send data. Two common methods:
+            <ul>
+                <li><b>GET</b> – Appends data into the URL.</li>
+                <li><b>POST</b> – Sends data in the request body (hidden from URL).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>3. Basic Form Example</h2>
+    <pre>
+&lt;form action="submit.php" method="post"&gt;
+    &lt;input type="text" name="username" placeholder="Enter your name"&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+    </pre>
+    <form action="#" method="post">
+        <input type="text" name="username" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>4. Input Attributes</h2>
+    <ul>
+        <li><b>type</b> – Specifies the input type (text, password, email, number, etc.).</li>
+        <li><b>id</b> – Unique identifier for linking with labels.</li>
+        <li><b>name</b> – Key used to send data to server.</li>
+        <li><b>placeholder</b> – Shows hint inside input field.</li>
+    </ul>
+
+    <h2>5. Using Labels</h2>
+    <pre>
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+    </pre>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+    </form>
+
+    <h2>6. Different Types of Inputs</h2>
+
+    <h3>6.1 Text</h3>
+    <p>Accepts textual data such as names.</p>
+    <pre>&lt;input type="text" name="username" placeholder="Enter your name"&gt;</pre>
+    <form>
+        <input type="text" name="username" placeholder="Enter your name"><br><br>
+    </form>
+
+    <h3>6.2 Email</h3>
+    <pre>&lt;input type="email" name="email" placeholder="Enter your email"&gt;</pre>
+    <form>
+        <input type="email" name="email" placeholder="Enter your email"><br><br>
+    </form>
+
+    <h3>6.3 Password</h3>
+    <pre>&lt;input type="password" name="password" placeholder="Enter password"&gt;</pre>
+    <form>
+        <input type="password" name="password" placeholder="Enter password"><br><br>
+    </form>
+
+    <h3>6.4 Number</h3>
+    <pre>&lt;input type="number" name="age" min="1" max="100"&gt;</pre>
+    <form>
+        <input type="number" name="age" placeholder="Enter age" min="1" max="100"><br><br>
+    </form>
+
+    <h3>6.5 Date, Time, Datetime-local</h3>
+    <pre>
+&lt;input type="date" name="dob"&gt;
+&lt;input type="time" name="time"&gt;
+&lt;input type="datetime-local" name="appointment"&gt;
+    </pre>
+    <form>
+        Date of Birth: <input type="date" name="dob"><br><br>
+        Time: <input type="time" name="time"><br><br>
+        Appointment: <input type="datetime-local" name="appointment"><br><br>
+    </form>
+
+    <h3>6.6 File</h3>
+    <pre>&lt;input type="file" name="uploadfile"&gt;</pre>
+    <form>
+        Upload File: <input type="file" name="uploadfile"><br><br>
+    </form>
+
+    <h3>6.7 Color</h3>
+    <pre>&lt;input type="color" name="favcolor"&gt;</pre>
+    <form>
+        Favorite Color: <input type="color" name="favcolor"><br><br>
+    </form>
+
+    <h3>6.8 Week and Month</h3>
+    <pre>
+&lt;input type="week" name="week"&gt;
+&lt;input type="month" name="month"&gt;
+    </pre>
+    <form>
+        Week: <input type="week" name="week"><br><br>
+        Month: <input type="month" name="month"><br><br>
+    </form>
+
+    <h3>6.9 URL</h3>
+    <pre>&lt;input type="url" name="website" placeholder="Enter website"&gt;</pre>
+    <form>
+        Website: <input type="url" name="website" placeholder="Enter website"><br><br>
+    </form>
+
+    <h3>6.10 Telephone</h3>
+    <pre>&lt;input type="tel" name="phone" placeholder="Enter phone number"&gt;</pre>
+    <form>
+        Phone: <input type="tel" name="phone" placeholder="Enter phone number"><br><br>
+    </form>
+
+    <h3>6.11 Search</h3>
+    <pre>&lt;input type="search" name="query" placeholder="Search here"&gt;</pre>
+    <form>
+        Search: <input type="search" name="query" placeholder="Search here"><br><br>
+    </form>
+
+    <h3>6.12 Radio Buttons</h3>
+    <pre>
+&lt;input type="radio" name="gender" value="male" id="ma"&gt;
+&lt;label for="ma"&gt;Male&lt;/label&gt;
+&lt;input type="radio" name="gender" value="female" id="fe"&gt;
+&lt;label for="fe"&gt;Female&lt;/label&gt;
+    </pre>
+    <form>
+        <input type="radio" name="gender" value="male" id="ma">
+        <label for="ma">Male</label>
+        <input type="radio" name="gender" value="female" id="fe">
+        <label for="fe">Female</label><br><br>
+    </form>
+
+    <h3>6.13 Checkboxes</h3>
+    <pre>
+&lt;input type="checkbox" name="lang" value="en" id="en"&gt;
+&lt;label for="en"&gt;English&lt;/label&gt;
+&lt;input type="checkbox" name="lang" value="od" id="od"&gt;
+&lt;label for="od"&gt;Odia&lt;/label&gt;
+&lt;input type="checkbox" name="lang" value="te" id="te"&gt;
+&lt;label for="te"&gt;Telugu&lt;/label&gt;
+&lt;input type="checkbox" name="lang" value="hi" id="hi"&gt;
+&lt;label for="hi"&gt;Hindi&lt;/label&gt;
+&lt;input type="checkbox" name="lang" value="kn" id="kn"&gt;
+&lt;label for="kn"&gt;Kannada&lt;/label&gt;
+    </pre>
+    <form>
+        <input type="checkbox" name="lang" value="en" id="en">
+        <label for="en">English</label>
+        <input type="checkbox" name="lang" value="od" id="od">
+        <label for="od">Odia</label>
+        <input type="checkbox" name="lang" value="hi" id="hi">
+        <label for="hi">Hindi</label>
+        <input type="checkbox" name="lang" value="te" id="te">
+        <label for="te">Telugu</label>
+        <input type="checkbox" name="lang" value="kn" id="kn">
+        <label for="kn">Kannada</label><br><br>
+    </form>
+
+    <h3>6.14 Textarea</h3>
+    <pre>&lt;textarea name="feedback" rows="4" cols="50" placeholder="Enter your feedback"&gt;&lt;/textarea&gt;</pre>
+    <form>
+        <textarea name="feedback" rows="4" cols="50" placeholder="Enter your feedback"></textarea><br><br>
+    </form>
+
+    <h3>6.15 Hidden Input</h3>
+    <pre>&lt;input type="hidden" name="userid" value="12345"&gt;</pre>
+    <form>
+        <input type="hidden" name="userid" value="12345">
+    </form>
+
+    <h3>6.16 Fieldset and Legend</h3>
+    <pre>
+&lt;fieldset&gt;
+    &lt;legend&gt;Personal Info&lt;/legend&gt;
+    &lt;input type="text" name="name"&gt;
+&lt;/fieldset&gt;
+    </pre>
+    <form>
+        <fieldset>
+            <legend>Personal Info</legend>
+            Name: <input type="text" name="name"><br><br>
+        </fieldset>
+    </form>
+
+    <h3>6.17 Button Types</h3>
+    <pre>
+&lt;input type="submit" value="Submit Form"&gt;
+&lt;input type="reset" value="Reset Form"&gt;
+&lt;input type="button" value="Click Me"&gt;
+&lt;input type="image" src="submit.png" alt="Submit"&gt;
+    </pre>
+    <form>
+        <input type="submit" value="Submit Form">
+        <input type="reset" value="Reset Form">
+        <input type="button" value="Click Me">
+        <input type="image" src="./submit-button-260nw-390234469.webp" alt="Submit" width="100"><br><br>
+    </form>
+
+</body>
+
+</html>

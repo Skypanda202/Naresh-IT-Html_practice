@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics Notes</title>
+</head>
+<body>
+
+
+
+<!-- Colors Section -->
+<fieldset>
+    <legend><strong>Colors in CSS</strong></legend>
+    <p>A good design depends on its brand colors. Use minimal colors for user interface to maintain clarity and purpose.</p>
+    <p>Colors can be added in multiple ways in CSS:</p>
+    <ul>
+        <li><strong>Hex Code:</strong> <code>#FF0000</code> → Red color</li>
+        <li><strong>RGB:</strong> <code>rgb(255,0,0)</code> → Red color</li>
+        <li><strong>RGBA:</strong> <code>rgba(255,0,0,0.5)</code> → Red color with 50% opacity</li>
+        <li><strong>Name:</strong> <code>red</code> → Red color</li>
+    </ul>
+    <p>Example using inline styles:</p>
+    <p style="color:#FF0000;">This text is red using hex code</p>
+    <p style="color:rgb(0,128,0);">This text is green using RGB</p>
+    <p style="color:rgba(0,0,255,0.5);">This text is blue with transparency using RGBA</p>
+    <p style="color:orange;">This text is orange using color name</p>
+</fieldset>
+
+<!-- Fonts Section -->
+<fieldset>
+    <legend><strong>Fonts in CSS</strong></legend>
+    <p>Fonts represent brand identity. Use minimal fonts for consistency.</p>
+    <ul>
+        <li><strong>Serif:</strong> Has strokes on corners. Example: Times New Roman</li>
+        <li><strong>Sans-serif:</strong> No strokes on corners. Example: Arial, Inter</li>
+        <li><strong>Monospace:</strong> Same width letters. Example: Courier New</li>
+        <li><strong>Cursive:</strong> Curved and styled. Example: Comic Sans MS</li>
+        <li><strong>Fantasy/Modern:</strong> Unique decorative fonts. Example: Impact</li>
+    </ul>
+    <p>Example using inline styles:</p>
+    <p style="font-family:'Times New Roman', serif;">This is a serif font</p>
+    <p style="font-family:Arial, sans-serif;">This is a sans-serif font</p>
+    <p style="font-family:Courier New, monospace;">This is a monospace font</p>
+    <p style="font-family:'Comic Sans MS', cursive;">This is a cursive font</p>
+    <p style="font-family:Impact, fantasy;">This is a fantasy font</p>
+
+    <p>Font properties:</p>
+    <ul>
+        <li><strong>font-weight:</strong> bold, normal, 100-900</li>
+        <li><strong>font-style:</strong> normal, italic</li>
+        <li><strong>font-size:</strong> small, medium, large, x-large, px</li>
+        <li><strong>text-align:</strong> left, right, center, justify</li>
+    </ul>
+</fieldset>
+
+<!-- Units Section -->
+<fieldset>
+    <legend><strong>CSS Units</strong></legend>
+    <p>Units represent measurements in CSS:</p>
+    <ul>
+        <li><strong>px:</strong> Pixels, fixed size</li>
+        <li><strong>%:</strong> Percentage of parent element</li>
+        <li><strong>vw:</strong> Viewport width (percentage of screen width)</li>
+        <li><strong>vh:</strong> Viewport height (percentage of screen height)</li>
+    </ul>
+    <p>Example:</p>
+    <p style="font-size:16px;">Font size using pixels (16px)</p>
+    <p style="font-size:120%;">Font size using percentage (120%)</p>
+    <p style="width:50vw; background-color: lightgray;">Div width using viewport width (50vw)</p>
+    <p style="height:20vh; background-color: lightblue;">Div height using viewport height (20vh)</p>
+</fieldset>
+
+</body>
+</html>

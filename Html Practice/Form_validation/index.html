@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Project</title>
+</head>
+<body>
+<div align="center"><h1>Registration Form</h1></div>
+
+<div align="center">
+    <form action="#" method="post">
+    <!-- Personal Details -->
+    <fieldset>
+        <legend>Personal Details</legend>
+        Full Name: <input type="text" name="fullname" placeholder="Enter full name" required minlength="4" maxlength="30">
+        <button type="submit">Submit</button><br><br>
+
+        Age: <input type="number" name="age" placeholder="Enter age" required min="18" max="60">
+        <button type="submit">Submit</button><br><br>
+
+        Email: <input type="email" name="email" placeholder="example@mail.com" required
+               pattern="[A-Za-z0-9._%+-]+@[A-Za-z]+\.[A-Za-z]{2,}">
+        <button type="submit">Submit</button>
+    </fieldset>
+
+    <br>
+
+    <!-- Login Details -->
+    <fieldset>
+        <legend>Login Details</legend>
+        Username: <input type="text" name="username" placeholder="Enter username" required minlength="4">
+        <button type="submit">Submit</button><br><br>
+
+        Password: <input type="password" name="password" placeholder="Enter password" required minlength="6">
+        <button type="submit">Submit</button><br><br>
+
+        Confirm Password: <input type="password" name="confirm" placeholder="Confirm password" required minlength="6">
+        <button type="submit">Submit</button>
+    </fieldset>
+
+    <br>
+
+    <!-- Preferences -->
+    <fieldset>
+        <legend>Preferences</legend>
+        Gender: 
+        <select name="gender" required>
+            <option value="">--Select--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <button type="submit">Submit</button><br><br>
+
+        Hobbies: <input type="text" name="hobbies" placeholder="Enter hobbies" required>
+        <button type="submit">Submit</button>
+    </fieldset>
+</form>
+</div>
+
+
+</body>
+</html>

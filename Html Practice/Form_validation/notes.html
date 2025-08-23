@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Validation Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        input {
+            margin: 5px 5px 5px 0;
+            padding: 4px;
+            width: 250px;
+        }
+        button {
+            margin-top: 5px;
+            padding: 5px 10px;
+        }
+        code {
+            display: block;
+            background-color: #eee;
+            padding: 5px;
+            margin: 5px 0 10px 0;
+            border-radius: 3px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        ul {
+            margin: 5px 0 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>HTML Form Validation Notes</h1>
+
+<!-- required -->
+<fieldset>
+    <legend>required</legend>
+    <p>Makes the input mandatory.</p>
+    <form action="#" method="post">
+        <input type="text" placeholder="This is required" required>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="text" required placeholder="This is required"&gt;</code>
+</fieldset>
+
+<!-- readonly -->
+<fieldset>
+    <legend>readonly</legend>
+    <p>Input cannot be edited but will be submitted.</p>
+    <form action="#" method="post">
+        <input type="text" value="Cannot change" readonly>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="text" value="Cannot change" readonly&gt;</code>
+</fieldset>
+
+<!-- disabled -->
+<fieldset>
+    <legend>disabled</legend>
+    <p>Input cannot be edited and will not be submitted.</p>
+    <form action="#" method="post">
+        <input type="text" value="Disabled field" disabled>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="text" value="Disabled field" disabled&gt;</code>
+</fieldset>
+
+<!-- minlength -->
+<fieldset>
+    <legend>minlength</legend>
+    <p>Minimum number of characters allowed.</p>
+    <form action="#" method="post">
+        <input type="text" minlength="4" placeholder="At least 4 chars" required>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="text" minlength="4" placeholder="At least 4 chars"&gt;</code>
+</fieldset>
+
+<!-- maxlength -->
+<fieldset>
+    <legend>maxlength</legend>
+    <p>Maximum number of characters allowed.</p>
+    <form action="#" method="post">
+        <input type="text" maxlength="10" placeholder="Max 10 chars" required>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="text" maxlength="10" placeholder="Max 10 chars"&gt;</code>
+</fieldset>
+
+<!-- min -->
+<fieldset>
+    <legend>min</legend>
+    <p>Minimum numerical value allowed.</p>
+    <form action="#" method="post">
+        <input type="number" min="18" placeholder="Min 18" required>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="number" min="18" placeholder="Min 18"&gt;</code>
+</fieldset>
+
+<!-- max -->
+<fieldset>
+    <legend>max</legend>
+    <p>Maximum numerical value allowed.</p>
+    <form action="#" method="post">
+        <input type="number" max="60" placeholder="Max 60" required>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="number" max="60" placeholder="Max 60"&gt;</code>
+</fieldset>
+
+<!-- pattern -->
+<fieldset>
+    <legend>pattern</legend>
+    <p>Input must match a regular expression (regex).</p>
+
+    <p><strong>Pattern Symbols:</strong></p>
+    <ul>
+        <li>[] — group</li>
+        <li>{ } — range</li>
+        <li>+ — at least 1 of the previous value</li>
+        <li>* — at least 0 times of the previous value</li>
+        <li>. — wildcard, matches any character</li>
+        <li>\d — digits (0-9)</li>
+        <li>\w — word characters (letters, digits, underscore)</li>
+        <li>\s — whitespace characters</li>
+    </ul>
+
+    <!-- Example 1 -->
+    <p><strong>Example 1:</strong> 4 uppercase letters followed by 4 digits</p>
+    <form action="#" method="post">
+        <input type="text" pattern="[A-Z]{4}[0-9]{4}" placeholder="ABCD1234" required>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="text" pattern="[A-Z]{4}[0-9]{4}" placeholder="ABCD1234"&gt;</code>
+
+    <!-- Example 2 -->
+    <p><strong>Example 2:</strong> Valid email format</p>
+    <form action="#" method="post">
+        <input type="email" pattern="[A-Za-z0-9.-_@#]+@[A-Za-z]+\.[A-Za-z]{2,}" placeholder="example@mail.com" required>
+        <button type="submit">Submit</button>
+    </form>
+    <code>&lt;input type="email" pattern="[A-Za-z0-9.-_@#]+@[A-Za-z]+\.[A-Za-z]{2,}" placeholder="example@mail.com"&gt;</code>
+
+</fieldset>
+
+</body>
+</html>

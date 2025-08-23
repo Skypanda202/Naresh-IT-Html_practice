@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables Notes</title>
+</head>
+<body>
+    <u><h1>Tables in HTML</h1></u>
+
+    <p>
+        <strong>Tables in HTML</strong> are used to represent data in rows and columns.  
+        <ul>
+            <li>The horizontal sets are called <strong>rows</strong>.</li>
+            <li>The vertical sets are called <strong>columns</strong>.</li>
+        </ul>
+    </p>
+
+    <h2>Basic Table Structure</h2>
+    <p>The whole table is represented inside the <code>&lt;table&gt;</code> element.</p>
+    <ul>
+        <li>Each row is written inside a <code>&lt;tr&gt;</code> tag.</li>
+        <li>Each column is written inside a <code>&lt;td&gt;</code> (table data) or <code>&lt;th&gt;</code> (table heading) tag.</li>
+    </ul>
+
+    <h3>Example:</h3>
+    <pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Akash&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+
+    <h3>Output:</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>Akash</td>
+        </tr>
+    </table>
+<hr>
+    <h2>Merging Rows and Columns</h2>
+    <p>
+        To combine rows or columns, we can use <code>rowspan</code> or <code>colspan</code> attributes  
+        inside the first element we want to merge.
+    </p>
+    <pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th colspan="2"&gt;Student Details&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Akash&lt;/td&gt;
+        &lt;td&gt;Maths&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Science&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+
+    <h3>Output:</h3>
+    <table border="1">
+        <tr>
+            <th colspan="2">Student Details</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Akash</td>
+            <td>Maths</td>
+        </tr>
+        <tr>
+            <td>Science</td>
+        </tr>
+    </table>
+<hr>
+
+    <h2>Adding Captions</h2>
+    <p>
+        We can add a title to your table using the <code>&lt;caption&gt;</code> tag.
+    </p>
+    <pre>
+&lt;table border="1"&gt;
+    &lt;caption&gt;Student Marks&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Marks&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Akash&lt;/td&gt;
+        &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+
+    <h3>Output:</h3>
+    <table border="1">
+        <caption>Student Marks</caption>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Akash</td>
+            <td>90</td>
+        </tr>
+    </table>
+<hr>
+
+    <h2>Semantic Table Elements</h2>
+    <p>
+        To help search engines and screen readers understand the table better, we can use:
+    </p>
+    <ul>
+        <li><code>&lt;thead&gt;</code> - Table header section</li>
+        <li><code>&lt;tbody&gt;</code> - Table body section</li>
+        <li><code>&lt;tfoot&gt;</code> - Table footer section</li>
+    </ul>
+    <pre>
+&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Marks&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Akash&lt;/td&gt;
+            &lt;td&gt;90&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;End of Results&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+    </pre>
+
+    <h3>Output:</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Akash</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">End of Results</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

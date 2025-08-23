@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Features Notes</title>
+</head>
+<body>
+
+<h1>HTML5 Features</h1>
+
+<p>HTML5 provides new features such as semantic elements, responsive images, SVG, canvas, drag and drop, etc.</p>
+
+<!-- SVG Section -->
+<fieldset>
+    <legend>SVG (Scalable Vector Graphics)</legend>
+    <p>SVG is used to create diagrams and vector graphics directly in HTML.</p>
+
+    <!-- Circle -->
+    <p>Circle:</p>
+    <svg width="200" height="200">
+        <circle cx="100" cy="100" r="50" fill="red"></circle>
+    </svg>
+    <pre>
+&lt;svg width="200" height="200"&gt;
+    &lt;circle cx="100" cy="100" r="50" fill="red"&gt;&lt;/circle&gt;
+&lt;/svg&gt;
+    </pre>
+
+    <!-- Rectangle -->
+    <p>Rectangle:</p>
+    <svg width="400" height="400">
+        <rect x="100" y="100" height="200" width="200" fill="blue"></rect>
+    </svg>
+    <pre>
+&lt;svg width="400" height="400"&gt;
+    &lt;rect x="100" y="100" height="200" width="200" fill="blue"&gt;&lt;/rect&gt;
+&lt;/svg&gt;
+    </pre>
+
+    <!-- Path -->
+    <p>Custom Shape (Path):</p>
+    <svg width="200" height="200">
+        <path d="M 50 50 L 150 50 L 150 150 L 50 50 Z" fill="green"></path>
+    </svg>
+    <pre>
+&lt;svg width="200" height="200"&gt;
+    &lt;path d="M 50 50 L 150 50 L 150 150 L 50 50 Z" fill="green"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+    </pre>
+
+    <p><strong>Explanation of Path Commands:</strong></p>
+    <ul>
+        <li>M - Move to the point</li>
+        <li>L - Draw a line to a point</li>
+        <li>Z - End of the path</li>
+    </ul>
+</fieldset>
+
+<!-- Canvas Section -->
+<fieldset>
+    <legend>Canvas</legend>
+    <p>Canvas element is used to draw 2D or 3D graphics using JavaScript.</p>
+    <canvas id="mycanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
+    <pre>
+&lt;canvas id="mycanvas" width="300" height="150"&gt;&lt;/canvas&gt;
+    </pre>
+</fieldset>
+
+<!-- Drag and Drop Section -->
+<fieldset>
+    <legend>Drag and Drop</legend>
+    <p>HTML5 provides drag and drop functionality using <code>draggable="true"</code> attribute on elements.</p>
+
+    <div draggable="true" style="width:150px; height:50px; background-color:lightcoral; text-align:center; line-height:50px;">
+        Drag Me
+    </div>
+
+    <pre>
+&lt;div draggable="true" style="width:150px; height:50px; background-color:lightcoral;"&gt;
+    Drag Me
+&lt;/div&gt;
+    </pre>
+
+    <p>Drag and drop requires JavaScript to handle drop events.</p>
+</fieldset>
+
+</body>
+</html>
